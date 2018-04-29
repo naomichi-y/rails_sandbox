@@ -1,0 +1,9 @@
+version: "3"
+services:
+  rails:
+    container_name: rails-sandbox-rails
+    build: .
+    volumes:
+      - .:/data/rails:cached
+    ports:
+      - 3000:3000
