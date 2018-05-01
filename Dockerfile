@@ -18,16 +18,17 @@ RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - \
 ENV LC_ALL=ja_JP.UTF-8
 
 # Setup application
-RUN mkdir -p /data/rails
-WORKDIR /data/rails
+ENV APP_HOME /app
+RUN mkdir -p $APP_HOME
+WORKDIR $APP_HOME
 
-COPY Gemfile* /data/rails/
+COPY Gemfile* $APP_HOME/
 RUN bundle install -j4 --path /usr/local/bundle
 
-COPY . /data/rails
 COPY ./etc/docker/rails/docker-entrypoint.sh /bin/docker-entrypoint.sh
 RUN chmod +x /bin/docker-entrypoint.sh
 
-VOLUME /data/rails
+COPY . $APP_HOME
+VOLUME $APP_HOME
 
 CMD ["/bin/docker-entrypoint.sh"]
