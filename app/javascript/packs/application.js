@@ -7,5 +7,8 @@
 // To reference this file, add <%= javascript_pack_tag 'application' %> to the appropriate
 // layout file, like app/views/layouts/application.html.erb
 
+require('admin-lte/plugins/bootstrap/js/bootstrap.bundle.min')
+require('admin-lte/dist/js/adminlte.min.js')
+
 console.log('Hello World from Webpacker')
 require('./hello_react.jsx')

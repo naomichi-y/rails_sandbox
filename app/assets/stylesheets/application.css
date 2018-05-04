@@ -13,3 +13,6 @@
  *= require_tree .
  *= require_self
  */
+
+@import 'admin-lte/plugins/font-awesome/css/font-awesome.min';
+@import 'admin-lte/dist/css/adminlte.min';

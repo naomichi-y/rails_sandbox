@@ -6,8 +6,11 @@ This package is Rails skeleton application.
 
 * Docker
   * docker-compose (Compose file version 3)
-* Ruby 2.5
-* Rails 5.2
-* Webpack
-  * Enable HMR
-* React
+* Frontend
+  * Webpack
+    * Enable HMR
+  * React
+* Backend
+  * Ruby 2.5
+  * Rails 5.2
+    * AdminLTE 3
