@@ -23,12 +23,10 @@ RUN mkdir -p $APP_HOME
 WORKDIR $APP_HOME
 
 COPY Gemfile* $APP_HOME/
-RUN bundle install -j4 --path /usr/local/bundle
-
-COPY ./etc/docker/rails/docker-entrypoint.sh /bin/docker-entrypoint.sh
-RUN chmod +x /bin/docker-entrypoint.sh
+RUN bundle install -j4 --path vendor/bundle
 
 COPY . $APP_HOME
-VOLUME $APP_HOME
+RUN yarn install
 
+COPY ./etc/docker/rails/docker-entrypoint.sh /bin/docker-entrypoint.sh
 CMD ["/bin/docker-entrypoint.sh"]
