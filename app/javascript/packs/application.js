@@ -7,5 +7,11 @@
 // To reference this file, add <%= javascript_pack_tag 'application' %> to the appropriate
 // layout file, like app/views/layouts/application.html.erb
 
-console.log('Hello World from Webpacker')
-require('./hello_react.jsx')
+import 'admin-lte/plugins/font-awesome/css/font-awesome.min'
+import 'admin-lte/dist/css/adminlte.min'
+import '../stylesheets/application'
+
+import 'admin-lte/plugins/bootstrap/js/bootstrap.bundle.min'
+import 'admin-lte/dist/js/adminlte.min'
+
+import './hello_react'

@@ -3,7 +3,10 @@
   "private": true,
   "dependencies": {
     "@rails/webpacker": "3.4",
+    "admin-lte": "^3.0.0-alpha",
     "babel-preset-react": "^6.24.1",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.3",
     "prop-types": "^15.6.1",
     "react": "^16.3.2",
     "react-dom": "^16.3.2"
